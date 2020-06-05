@@ -36,7 +36,7 @@ kind: Deployment
 metadata:
   name: azure-vote-front
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: azure-vote-front
@@ -54,7 +54,7 @@ spec:
         "beta.kubernetes.io/os": linux
       containers:
       - name: azure-vote-front
-        image: huangyingting/azure-vote-front-argo:latest
+        image: huangyingting/azure-vote-front-argo:v1
         ports:
         - containerPort: 80
         resources:
